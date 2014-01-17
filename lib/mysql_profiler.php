@@ -20,6 +20,7 @@ class MysqlProfiler {
 			wp_enqueue_style('mysql-profiler', plugins_url('css/style.css', dirname(__FILE__)));
 			add_filter('query', array($this, 'on_query'));
 			add_action('wp_footer', array($this, 'wp_footer'), 1000);
+			add_action('admin_footer', array($this, 'wp_footer'), 1000);
 		}
 	}
 
